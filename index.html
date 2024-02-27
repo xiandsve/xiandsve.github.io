@@ -24,6 +24,9 @@
             padding: 10px 20px;
             cursor: pointer;
         }
+        .blurred {
+            filter: blur(10px);
+        }
     </style>
 </head>
 <body>
@@ -41,7 +44,62 @@
         this.style.display = 'none'; // Hide the play button
         video.play();
     });
+    document.getElementById('video').addEventListener('click', function (e) {
+    if (this.paused || this.ended) {
+        this.play();
+        this.classList.remove('blurred');
+    } else {
+        this.pause();
+        this.classList.add('blurred');
+    }
+    });
 </script>
 
 </body>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Playback</title>
+<style>
+  /* Centering the video in the page */
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  /* Style for the blurred video */
+  .blurred {
+    filter: blur(8px);
+  }
+</style>
+</head>
+<body>
+
+<video id="videoPlayer" width="750" controls autoplay loop>
+  <source src="save_the_date.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+// JavaScript to toggle play/pause and blur
+document.getElementById('videoPlayer').addEventListener('click', function (e) {
+  if (this.paused || this.ended) {
+    this.play();
+    this.classList.remove('blurred');
+  } else {
+    this.pause();
+    this.classList.add('blurred');
+  }
+});
+</script>
+
+</body>
+</html> -->
