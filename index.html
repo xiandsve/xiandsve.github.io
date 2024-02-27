@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Video</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        video {
+            width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+            display: none; /* Initially hide the video */
+        }
+        #playButton {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<video id="video" loop playsinline>
+    <source src="save_the_date.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<button id="playButton">Play</button>
+
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var video = document.getElementById('video');
+        video.style.display = 'block'; // Show the video
+        this.style.display = 'none'; // Hide the play button
+        video.play();
+    });
+</script>
+
+</body>
+</html>
