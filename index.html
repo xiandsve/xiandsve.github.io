@@ -15,8 +15,8 @@
             min-height: 100vh;
         }
         body {
-            /* background-color: rgb(243, 244, 241); */
-            background-color: rgb(247, 247, 245);
+            background-size: cover;
+            background-position: center;
         }
         video {
             max-height: 100%;
@@ -48,6 +48,7 @@
         var video = document.getElementById('video');
         video.style.display = 'block'; // Show the video
         this.style.display = 'none'; // Hide the play button
+        document.body.style.backgroundImage = "url('save_the_date_blurred.png')"; // Add background
         video.play();
     });
     document.getElementById('video').addEventListener('click', function (e) {
