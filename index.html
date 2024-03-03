@@ -41,11 +41,12 @@
             filter: blur(10px);
         }
     </style>
+    <link rel="icon" type="image/png" href="resources/icon.png">
 </head>
 <body>
 
 <video id="video" loop playsinline>
-    <source src="save_the_date.mp4" type="video/mp4">
+    <source src="resources/save_the_date.mp4" type="video/mp4" preload="auto">
     Your browser does not support the video tag.
 </video>
 <button id="playButton">Вижте кога си казваме "Да"</button>
@@ -55,7 +56,7 @@
         var video = document.getElementById('video');
         video.style.display = 'block'; // Show the video
         this.style.display = 'none'; // Hide the play button
-        document.body.style.backgroundImage = "url('save_the_date_blurred.png')"; // Add background
+        document.body.style.backgroundImage = "url('resources/save_the_date_blurred.png')"; // Add background
         video.play();
     });
     document.getElementById('video').addEventListener('click', function (e) {
