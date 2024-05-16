@@ -9,7 +9,7 @@
 <body>
     <div class="container p-5" style="width: 50vh;">
         <h1 class="text-center mb-5">Wedding RSVP</h1>
-        <form>
+        <form action="https://example.com/submit-rsvp" method="POST">
             <div class="mb-3">
                 <label class="form-label fw-bold">Will you be attending the wedding?</label>
                 <div class="form-check">
@@ -24,12 +24,12 @@
                 </div>
             </div>
             <div id="guest-list" class="mb-3">
-                <label class="form-label fw-bold">Guest Names:</label>
+                <label class="form-label fw-bold">Names:</label>
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="guest-names[]" placeholder="Guest Name" required>
+                    <input type="text" class="form-control" name="guest1" placeholder="Guest Name" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="guest-names[]" placeholder="Guest Name">
+                    <input type="text" class="form-control" name="guest2" placeholder="Guest Name">
                 </div>
             </div>
             <div class="mb-3">
