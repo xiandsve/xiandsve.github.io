@@ -5,8 +5,8 @@ function padNumber(number) {
     return number.toString().padStart(2, '0');
 }
 
-// Update the countdown every 1 second
-const interval = setInterval(function() {
+
+function updateCountdown() {
     const now = new Date().getTime();
     // console.log(targetDate);
     // console.log(now);
@@ -28,4 +28,8 @@ const interval = setInterval(function() {
         clearInterval(interval);
         document.getElementById("countdown").innerHTML = "EXPIRED";
     }
-}, 1000);
+}
+
+// Update the countdown every 1 second
+updateCountdown();
+const interval = setInterval(updateCountdown, 1000);
