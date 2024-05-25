@@ -33,6 +33,14 @@
             margin: 2px;  /* Smaller margins */
             padding: 2px; /* Smaller padding */
         }
+        .qa-box {
+            width: 40vw;
+        }
+        @media (max-width: 1200px) {
+            .qa-box {
+                width: 80vw;
+            }
+        }
     </style>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -115,9 +123,23 @@
         <div class="row p-5">
             <p class="h2 text-center mb-5 mt-5 section-title">Въпроси и Отговори</p>
 
-            <div class="mx-auto" style="width: 80vh;">
-                <p class="mt-4 font-weight-bold">■ Мога ли да се настаня по-рано/по-късно?</p>
-                <p class="mt-1">Да! Но ни пишете, за да уведомим хотела.</p>
+            <div class="mt-3">
+                <div class="card mb-4 qa-box mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Можем ли да доведем децата си на сватбата?</h5>
+                        <p class="card-text">
+                            Обичаме вашите малки, но решихме нашият специален ден да бъде само за възрастни. 
+                            Моля, приемете нашето решение като възможност да се насладите на вечерта като мини почивка! 
+                            Благодарим ви за разбирането и очакваме с нетърпение да споделим нашата радост с вас.
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-4 qa-box mx-auto">
+                    <div class="card-body">
+                        <h5 class="card-title">Мога ли да се настаня по-рано/по-късно?</h5>
+                        <p class="card-text">Да! Но ни пишете, за да уведомим хотела.</p>
+                    </div>
+                </div>
             </div>
             
         </div>
