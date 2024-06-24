@@ -8,69 +8,98 @@
 </head>
 <body>
     <div class="container p-5" style="width: 50vh;">
-        <h1 class="text-center mb-5">Wedding RSVP</h1>
+        <h1 class="text-center mb-4">Wedding RSVP</h1>
         <form onsubmit="submitForm(event)">
-            <div class="mb-3">
-                <label class="form-label fw-bold">Will you be attending the wedding?</label>
+            <div class="mb-4">
+                <label class="form-label fw-bold">Ще присъствате ли на нашата сватба?</label>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input " type="radio" name="attending" value="yes" required> Yes
+                        <input class="form-check-input " type="radio" name="attending_wedding" value="yes" required> Да
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="attending" value="no" required> No
+                        <input class="form-check-input" type="radio" name="attending_wedding" value="no" required> Не
                     </label>
                 </div>
             </div>
-            <div id="guest-list" class="mb-3">
-                <label class="form-label fw-bold">Names:</label>
+            <div id="guest-list" class="mb-4">
+                <label class="form-label fw-bold">Вашите имена</label>
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="guest1" placeholder="Guest Name" required>
+                    <input type="text" class="form-control" name="guest1" placeholder="Име на гост" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="guest2" placeholder="Guest Name">
+                    <input type="text" class="form-control" name="guest2" placeholder="Име на гост">
                 </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label fw-bold">Food Preference:</label>
+            <div class="mb-4">
+                <label class="form-label fw-bold">Хранителни предпочитания</label>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="food_preference" value="no-preference" checked>No Preference
+                        <input class="form-check-input" type="radio" name="food_preference" value="no-preference" checked>Нямам
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="food_preference" value="vegetarian">Vegetarian
+                        <input class="form-check-input" type="radio" name="food_preference" value="vegetarian">Вегетарианец
                     </label>
                 </div>
                 <div class="form-check">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="food_preference" value="vegan">Vegan
-                    </label>
-                </div>
-                <div class="form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="food_preference" value="pescatarian">Pescatarian
+                        <input class="form-check-input" type="radio" name="food_preference" value="vegan">Веган
                     </label>
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="allergies" class="form-label fw-bold">Food Allergies:</label>
-                <textarea class="form-control" id="allergies" name="allergies" rows="4" placeholder="Please specify any food allergies..."></textarea>
+            <div class="mb-4">
+                <label for="allergies" class="form-label fw-bold">Хранителни алергии</label>
+                <textarea class="form-control" id="allergies" name="allergies" rows="4" placeholder="Моля, посочете, ако имате някакви..."></textarea>
             </div>
-            <div class="mb-3">
-                <label class="form-label fw-bold">Do You Plan to Stay Additional Days at the Hotel?</label>
+            <div class="mb-4">
+                <label class="form-label fw-bold">Планирате ли допълнителна нощувка в хотела?</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="additional_stay" value="no" checked>
-                    <label class="form-check-label">No</label>
+                    <label class="form-check-label">Не</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="additional_stay" value="yes">
-                    <label class="form-check-label">Yes</label>
+                    <input class="form-check-input" type="radio" name="additional_stay" value="yes_21">
+                    <label class="form-check-label">Да (21.09)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="additional_stay" value="yes_23">
+                    <label class="form-check-label">Да (23.09)</label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit RSVP</button>
+            <div class="mb-4">
+                <label class="form-label fw-bold">Ще присъствате ли на взимането на булката от Плевен?</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="attending_pleven" value="maybe" checked> Не съм сигурен
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input " type="radio" name="attending_pleven" value="yes"> Да
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="attending_pleven" value="no"> Не
+                    </label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="tracks" class="form-label fw-bold">🎵 Музикален поздрав 🎵 </label>
+                <textarea class="form-control" id="tracks" name="tracks" rows="4" placeholder="Не е задължително, но ако желаете, може да ни поздравите с песен(и). Поздравите се изпращат директно към нашия DJ"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="game_questions" class="form-label fw-bold">¿ Тя или той ?</label>
+                <textarea class="form-control" id="game_questions" name="game_questions" rows="4" placeholder="&quot;Кой готви по-добре?&quot; - ако ви е интересно, може да зададете такива въпроси, които могат да бъдат зададени. Въпросите се изпращам директно към водещия." ></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="honeymoon" class="form-label fw-bold">Препоръчайти ни дестинация за меден месец</label>
+                <input type="text" class="form-control" id="honeymoon" name="honeymoon">
+            </div>
+            <button type="submit" class="btn btn-primary">Изпрати</button>
         </form>
     </div>
     <script>
