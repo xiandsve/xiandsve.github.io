@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container p-5" style="width: 50vh;">
-        <h1 class="text-center mb-4">Wedding RSVP</h1>
+        <h1 class="text-center mb-4">RSVP</h1>
         <form onsubmit="submitForm(event)">
             <div class="mb-4">
                 <label class="form-label fw-bold">Ще присъствате ли на нашата сватба?</label>
@@ -61,11 +61,11 @@
                     <label class="form-check-label">Не</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="additional_stay" value="yes_21">
+                    <input class="form-check-input" type="radio" name="additional_stay" value="yes-21">
                     <label class="form-check-label">Да (21.09)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="additional_stay" value="yes_23">
+                    <input class="form-check-input" type="radio" name="additional_stay" value="yes-23">
                     <label class="form-check-label">Да (23.09)</label>
                 </div>
             </div>
@@ -88,8 +88,26 @@
                 </div>
             </div>
             <div class="mb-4">
-                <label for="tracks" class="form-label fw-bold">🎵 Музикален поздрав 🎵 </label>
-                <textarea class="form-control" id="tracks" name="tracks" rows="4" placeholder="Не е задължително, но ако желаете, може да ни поздравите с песен(и). Поздравите се изпращат директно към нашия DJ"></textarea>
+                <label class="form-label fw-bold">Имате ли нужда от транспорт?</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="transport_required" value="no" checked> Не
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input " type="radio" name="transport_required" value="yes-pleven"> Да, от Плевен
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input " type="radio" name="transport_required" value="yes-sofia"> Да, от София
+                    </label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="greeting_songs" class="form-label fw-bold">🎵 Музикален поздрав 🎵 </label>
+                <textarea class="form-control" id="greeting_songs" name="greeting_songs" rows="4" placeholder="Не е задължително, но ако желаете, може да ни поздравите с песен(и). Поздравите се изпращат директно към нашия DJ"></textarea>
             </div>
             <div class="mb-4">
                 <label for="game_questions" class="form-label fw-bold">¿ Тя или той ?</label>
@@ -113,7 +131,7 @@
                 data[key] = value;
             });
 
-            fetch('https://simple-heroku-rest-api-02982ee81527.herokuapp.com/api/rsvp', {
+            fetch('https://wedding-rest-api-ac85c057ba2b.herokuapp.com/rsvps', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -122,8 +140,7 @@
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Success:', data);
-                alert('RSVP submitted successfully!');
+                window.location.href = 'thankyou.html';
             })
             .catch((error) => {
                 console.error('Error:', error);
