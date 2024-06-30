@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ξ + Σ</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style>
         body::-webkit-scrollbar {
             display: none;
@@ -29,25 +34,16 @@
         .programme-item-header {
             border-bottom: 2px solid #e9ecef;
         }
-        .tightly-packed {
-            margin: 2px;  /* Smaller margins */
-            padding: 2px; /* Smaller padding */
-        }
         .qa-box {
-            width: 40vw;
+            width: 40%;
         }
         @media (max-width: 1200px) {
             .qa-box {
-                width: 80vw;
+                width: 100%;
             }
         }
     </style>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -124,53 +120,96 @@
         </div>
         <div class="row p-5">
             <p class="h2 text-center mb-5 mt-5 section-title">Въпроси и Отговори</p>
-
-            <div class="mt-3">
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">До кога трябва да потвърдя присъствието си?</h5>
-                        <p class="card-text">Моля да потвърдите присъствието си най-късно до 15-ти август. Можете да потвърдите присъствието си, като попълните формата за <a href="./rsvp.html">RSVP</a> на нашия уебсайт или като се свържете с нас директно.</p>
+            <div id="accordionQA" class="accordion mt-3 qa-box mx-auto">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        До кога трябва да потвърдя присъствието си?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Моля да потвърдите присъствието си най-късно до 15-ти август. Можете да потвърдите присъствието си, като попълните формата за RSVP 
+                        на нашия уебсайт или като се свържете с нас директно.
                     </div>
+                  </div>
                 </div>
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Осигурена ли е нощувка за гостите в деня на сватбата?</h5>
-                        <p class="card-text">Да, осигурили сме нощувка за всички гости в деня на сватбата, която е комплимент от нас. Моля, информирайте ни предварително дали ще се възползвате от тази опция, за да уведомим хотела своевременно.</p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Осигурена ли е нощувка за гостите в деня на сватбата?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Да, осигурили сме нощувка за всички гости в деня на сватбата, която е комплимент от нас. Моля, информирайте ни предварително дали ще се възползвате от тази опция, за да уведомим хотела своевременно.
                     </div>
+                  </div>
                 </div>
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Мога ли да се настаня по-рано/да остана след деня на сватбата?</h5>
-                        <p class="card-text">Да! Но ни уведомете предварително, за да може да координираме с хотела.</p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Мога ли да се настаня по-рано/да остана след деня на сватбата?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Да! Но ни уведомете предварително, за да може да координираме с хотела.
                     </div>
+                  </div>
                 </div>
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Може ли да доведем децата си на сватбата?</h5>
-                        <p class="card-text">
-                            Много обичаме вашите малки, но решихме нашият специален ден да бъде само за възрастни. 
-                            Моля, приемете нашето решение като възможност да се насладите на вечерта като мини почивка! 
-                            Благодарим ви за разбирането и очакваме с нетърпение да споделим нашата радост с вас.
-                        </p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Може ли да доведем децата си на сватбата?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Много обичаме вашите малки, но решихме нашият специален ден да бъде само за възрастни. 
+                        Моля, приемете нашето решение като възможност да се насладите на вечерта като мини почивка! 
+                        Благодарим ви за разбирането и очакваме с нетърпение да споделим нашата радост с вас.
                     </div>
+                  </div>
                 </div>
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Какъв е дрескодът на събитието?</h5>
-                        <p class="card-text">Дрескодът е официален. Ще се радваме да допринесете за магията на нашия празник, като се вдъхновите от нашата цветова гама. </p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Какъв е дрескодът на събитието?
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Дрескодът е официален. Ще се радваме да допринесете за магията на нашия празник, 
+                        като се вдъхновите от нашата цветова гама.
                     </div>
+                  </div>
                 </div>
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Какво да ви подаря?</h5>
-                        <p class="card-text">Вашето присъствие ще бъде най-големият подарък за нас, но ако решите да ни зарадвате, то нека бъде с принос към нашето сватбено пътешествие. Благодарим ви! </p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Какво да ви подаря?
+                    </button>
+                  </h2>
+                  <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Вашето присъствие ще бъде най-големият подарък за нас, но ако решите да ни зарадвате, 
+                        то нека бъде с принос към нашето сватбено пътешествие. Благодарим ви!
                     </div>
+                  </div>
                 </div>
-                <div class="card mb-4 qa-box mx-auto">
-                    <div class="card-body">
-                        <h5 class="card-title">Какво да направя, ако няма да имам възможност да присъствам?</h5>
-                        <p class="card-text"> Много съжаляваме, че няма да може да присъствате и ще ни липсвате! Моля, уведомете ни възможно най-скоро във формата за <a href="./rsvp.html">RSVP</a> или се свържете с нас директно. </p>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        Какво да направя, ако няма да имам възможност да присъствам?
+                    </button>
+                  </h2>
+                  <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
+                    <div class="accordion-body">
+                        Много съжаляваме, че няма да може да присъствате и ще ни липсвате! Моля, уведомете ни 
+                        възможно най-скоро във формата за <a href="./rsvp.html">RSVP</a> или се свържете с нас директно.
                     </div>
+                  </div>
                 </div>
             </div>
             
@@ -180,5 +219,6 @@
     </div>
 
     <script src="./js/countdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
