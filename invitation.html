@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Покана за шаферка</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .invitation {
+            background-color: #fff;
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s;
+            width: 400px;
+        }
+        
+        @media (max-width: 600px) {
+            .invitation {
+                width: 60vw;
+            }
+        }
+        p {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #ffb6c1;
+            margin: 0;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        button {
+            background-color: #ffb6c1;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #ffa6b1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <h1>Ще бъдеш ли моя шаферка?</h1>
+        <div class="invitation-body">
+            <p>Скъпа <span id="name">[Име]</span>,</p>
+            <p>
+                Най-щастливият ден в живота ми наближава и не мога да си го представя без теб до мен. 
+                Ти си не само моя най-добра приятелка, но и моя подкрепа и вдъхновение. 
+                Би ли ми направила честта да бъдеш моя шаферка? 
+                Твоето присъствие ще направи този ден още по-специален.
+            </p>
+        </div>
+        <button onclick="showFireworks()">Да, ще бъда!</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function base64ToUtf8(base64) {
+            return decodeURIComponent(escape(atob(base64)));
+        }
+
+        function utf8ToBase64(str) {
+            return btoa(unescape(encodeURIComponent(str)));
+        }
+
+        function showFireworks() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const encodedName = getQueryParam('name');
+            if (encodedName) {
+                const name = base64ToUtf8(encodedName);
+                if (name) {
+                    document.getElementById('name').textContent = name;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
