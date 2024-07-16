@@ -90,9 +90,9 @@
             });
         }
 
-        async function fetchInvitation(invitation_id) {
+        async function fetchInvitation(uuid) {
             try {
-                const response = await fetch(`https://stormy-hamlet-09895-59d54ee9ea34.herokuapp.com/invitation/${invitation_id}`);
+                const response = await fetch(`https://stormy-hamlet-09895-59d54ee9ea34.herokuapp.com/invitation/${uuid}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -105,10 +105,10 @@
         }
 
         document.addEventListener('DOMContentLoaded', async (event) => {
-            const invitation_id = new URLSearchParams(window.location.search).get('id');
-            const invitation = await fetchInvitation(invitation_id);
+            const uuid = new URLSearchParams(window.location.search).get('uuid');
+            const invitation = await fetchInvitation(uuid);
             console.log(invitation);
-            if (!invitation_id || !invitation || Object.keys(invitation).length === 0) {
+            if (!uuid || !invitation || Object.keys(invitation).length === 0) {
                 document.body.innerHTML = '';  // Clear the page
                 return;
             }
