@@ -12,6 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
         body::-webkit-scrollbar {
             display: none;
         }
@@ -49,17 +54,42 @@
                 width: 100%;
             }
         }
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: none;
+            /* border: 2px solid #bc9659; */
+        }
+        .btn-gold {
+            background-color: #bc9659; /* Custom button color */
+            border-color: #bc9659;
+            color: white; /* Text color */
+        }
+        .btn-gold:hover {
+            background-color: #a47e49; /* Slightly darker shade for hover effect */
+            border-color: #a47e49;
+        }
     </style>
     
     
 </head>
 <body>
     <div class="container-fluid p-0">
-        <div class="row">
+        <nav id="navbar" class="navbar navbar-light bg-light">
+            <div class="container-fluid justify-content-center">
+                <span class="navbar-text me-3 fw-bold">
+                    Запишете се до 22.08.2024
+                </span>
+                <a href="./rsvp.html" type="button" class="btn btn-gold">RSVP</a>
+            </div>
+        </nav>
+        <div id="cover" class="row">
             <img src="./resources/cover.jpg" class="img-fluid">
         </div>
-        <div class="row p-3 mx-auto" style="width: 30vh;">
-            <img src="./resources/monogram.png">
+        <div class="row m-3 mt-5 mx-auto" style="width: 20vh;">
+            <img src="./resources/monogram.svg">
         </div>
         <div class="row p-5">
             <h2 class="text-center" style="font-family: 'Great Vibes', cursive; font-size: 60px;">Ксения & Светослав</h2>
@@ -207,11 +237,14 @@
                 </svg>
                 <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
                     <rect width="60" height="60" fill="#FFB6C1" filter="url(#fabricNoise)" mask="url(#circleMask)" />
-                </svg>  
+                </svg>
+                <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="60" fill="#B0B0B0" filter="url(#fabricNoise)" mask="url(#circleMask)" />
+                </svg>
+                <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="60" fill="#000" filter="url(#fabricNoise)" mask="url(#circleMask)" />
+                </svg>
             </div>
-        </div>        
-        <div class="row p-5 justify-content-center">
-            <a href="./rsvp.html" type="button" class="btn btn-outline-primary btn-lg w-50 align-items-center">Запишете се</a>
         </div>
         <div class="row p-5">
             <p class="h2 text-center mb-5 mt-5 section-title">Въпроси и Отговори</p>
@@ -298,5 +331,20 @@
 
     <script src="./js/countdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            var cover = document.getElementById("cover");
+            if (window.pageYOffset >= cover.offsetHeight) {
+                navbar.style.display = "flex";
+                console.log(window.pageYOffset);
+                console.log(document.documentElement.scrollTop);
+                console.log(document.body.scrollTop);
+            } else {
+                navbar.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
