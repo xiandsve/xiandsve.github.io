@@ -1,0 +1,25 @@
+
+.btn-gold {
+    background-color: #bc9659; /* Custom button color */
+    border-color: #bc9659;
+    color: white; /* Text color */
+}
+
+.btn-gold:hover {
+    background-color: #a47e49; /* Slightly darker shade for hover effect */
+    border-color: #a47e49;
+}
+
+.text-gold {
+    color: #bc9659;
+}
+
+.adaptive-width {
+    width: 40%;
+}
+
+@media (max-width: 1200px) {
+    .adaptive-width {
+        width: 100%;
+    }
+}

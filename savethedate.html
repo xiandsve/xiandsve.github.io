@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Date</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        body {
+            background-size: cover;
+            background-position: center;
+        }
+        video {
+            max-height: 100%;
+            max-width: 100%;
+            max-height: 100vh;
+            object-fit: contain;
+            display: none; /* Initially hide the video */
+        }
+        #playButton {
+            font-size: 20px;
+            padding: 10px 10px;
+            border: none;
+            background-color: #E3B17F;
+            color: white;
+            cursor: pointer;
+            border-radius: 15px; /* This makes the button rounder */
+            /* Additional styles for aesthetics */
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .blurred {
+            filter: blur(10px);
+        }
+    </style>
+    <link rel="icon" type="image/png" href="resources/icon.png">
+</head>
+<body>
+
+<video id="video" loop playsinline>
+    <source src="resources/save_the_date.mp4" type="video/mp4" preload="auto">
+    Your browser does not support the video tag.
+</video>
+<button id="playButton">Вижте кога си казваме "Да"</button>
+
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var video = document.getElementById('video');
+        video.style.display = 'block'; // Show the video
+        this.style.display = 'none'; // Hide the play button
+        document.body.style.backgroundImage = "url('resources/save_the_date_blurred.png')"; // Add background
+        video.play();
+    });
+    document.getElementById('video').addEventListener('click', function (e) {
+    if (this.paused || this.ended) {
+        this.play();
+        this.classList.remove('blurred');
+    } else {
+        this.pause();
+        this.classList.add('blurred');
+    }
+    });
+</script>
+
+</body>
+</html>
