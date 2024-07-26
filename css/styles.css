@@ -23,10 +23,3 @@
         width: 100%;
     }
 }
-
-@font-face {
-    font-family: 'ArnoPro';
-    src: url('../fonts/ArnoPro-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
