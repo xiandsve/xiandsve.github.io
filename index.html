@@ -22,9 +22,8 @@
             display: none;
         }
         .section-title {
-            font-family: "Lora", serif;
-            font-optical-sizing: auto;
-            font-style: normal;
+            font-family: 'Great Vibes', cursive;
+            font-size: 45px;
         }
         .schedule-box {
             background: #fff;
@@ -41,6 +40,10 @@
             width: 5vh;
             height: 5vh;
         }
+        .schedule-item-header {
+            font-size: 16px;
+            font-weight: bold;
+        }
         .text-justify {
             text-align: justify;
         }
@@ -50,10 +53,6 @@
             width: 100%;
             z-index: 1000;
             display: none;
-        }
-        .font-cursive {
-            font-family: 'Great Vibes', cursive;
-            font-size: 40px;
         }
     </style>
     
@@ -76,12 +75,12 @@
             <img src="./resources/monogram.svg">
         </div>
         <div class="row p-5">
-            <h2 class="text-center" style="font-family: 'Great Vibes', cursive; font-size: 60px;">Ксения & Светослав</h2>
-            <p class="text-center" style="font-family: 'Great Vibes', cursive; font-size: 50px;">22.09.2024</p>
-            <p id="countdown" class="text-center h5 mt-3 section-title">
+            <h2 class="text-center section-title" style="font-size: 65px;">Ксения & Светослав</h2>
+            <p class="text-center section-title">22.09.2024</p>
+            <p id="countdown" class="text-center section-title" style="font-size: 25px;">
         </div>
         <div class="row p-5 mx-auto adaptive-width">
-            <p class="text-center section-title font-cursive">Нашата история</p>
+            <p class="text-center section-title">Нашата история</p>
             <p class="mt-5 text-left fw-bold fst-italic">
                 „Когато те видях, аз се влюбих, а ти се усмихна, защото знаеше...“ /Уилям Шекспир/
             </p>
@@ -124,15 +123,15 @@
         </div>
         <div class="row">
             <!-- timeline https://bootsnipp.com/snippets/xrKXW#google_vignette -->
-            <p class="text-center mb-5 mt-5 section-title font-cursive">Програма</p>
+            <p class="text-center mb-5 mt-5 section-title">Програма</p>
             <div>
                 <div class="mx-auto schedule-box">
                     <div class="px-4 pt-4 pb-2">
                         <div class="d-flex align-items-center pb-2">
                             <img src="./resources/car.svg" class="schedule-icon">
                             <div class="ms-1 row">
-                                <p class="h6 fw-bold ps-2">10:15 Вземане на булката</p>
-                                <a href="https://maps.app.goo.gl/ep9s3S3WbXaXF9d5A" target="_blank" class="ps-3">Домът на булката, Плевен</a>
+                                <p class="schedule-item-header ps-2 m-0">10:15 Вземане на булката</p>
+                                <a href="https://maps.app.goo.gl/ep9s3S3WbXaXF9d5A" target="_blank">Домът на булката, Плевен</a>
                             </div>
                         </div>
                     </div>
@@ -140,7 +139,7 @@
                         <div class="d-flex align-items-center pt-3 pb-2">
                             <img src="./resources/church.svg" class="schedule-icon">
                             <div class="ms-1 row">
-                                <p class="h6 fw-bold ps-2">13:45 Венчавка</p>
+                                <p class="schedule-item-header ps-2 m-0">13:45 Венчавка</p>
                                 <a href="https://maps.app.goo.gl/cvFXQUfq5cWQ6gGb8" target="_blank">Храм „Успение Богородично”, Ботевград</a>
                             </div>
                         </div>
@@ -149,7 +148,7 @@
                         <div class="d-flex align-items-center pt-3 pb-2">
                             <img src="./resources/martini.svg" class="schedule-icon">
                             <div class="ms-1 row">
-                                <p class="h6 fw-bold ps-2">16:00 Коктейл</p>
+                                <p class="schedule-item-header ps-2 m-0">16:00 Коктейл</p>
                                 <a href="https://maps.app.goo.gl/Bs4uTC1b8pUMJENz5" target="_blank">При фонтана, Hyatt Pravets</a>
                             </div>
                         </div>
@@ -158,7 +157,7 @@
                         <div class="d-flex align-items-center pt-3 pb-2">
                             <img src="./resources/rings.svg" class="schedule-icon">
                             <div class="ms-1 row">
-                                <p class="h6 fw-bold ps-2">16:30 Церемония</p>
+                                <p class="schedule-item-header ps-2 m-0">16:30 Церемония</p>
                                 <a href="https://maps.app.goo.gl/Bs4uTC1b8pUMJENz5" target="_blank">При фонтана, Hyatt Pravets</a>
                             </div>
                         </div>
@@ -167,7 +166,7 @@
                         <div class="d-flex align-items-center pt-3 pb-2">
                             <img src="./resources/camera.svg" class="schedule-icon">
                             <div class="ms-1 row">
-                                <p class="h6 fw-bold ps-2">17:00 Поздравления и снимки с гостите</p>
+                                <p class="schedule-item-header ps-2 m-0">17:00 Поздравления и снимки с гостите</p>
                                 <a href="https://maps.app.goo.gl/Bs4uTC1b8pUMJENz5" target="_blank">При фонтана, Hyatt Pravets</a>
                             </div>
                         </div>
@@ -176,7 +175,7 @@
                         <div class="d-flex align-items-center pt-3 pb-2">
                             <img src="./resources/utensils.svg" class="schedule-icon">
                             <div class="ms-1 row">
-                                <p class="h6 fw-bold ps-2">19:00 Ресторант</p>
+                                <p class="schedule-item-header ps-2 m-0">19:00 Ресторант</p>
                                 <a href="https://maps.app.goo.gl/Bs4uTC1b8pUMJENz5" target="_blank">Зала „Правец“, Hyatt Pravets</a>
                             </div>
                         </div>
@@ -185,7 +184,7 @@
             </div>
         </div>    
         <div class="row p-5">
-            <p class="text-center mb-5 mt-5 section-title font-cursive">Цветова гама</p>
+            <p class="text-center mb-5 mt-5 section-title">Цветова гама</p>
             <p></p>
             <div class="text-center">
                 <svg width="45" height="45" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +218,7 @@
             </div>
         </div>
         <div class="row p-5">
-            <p class="text-center mb-5 section-title font-cursive">Въпроси и Отговори</p>
+            <p class="text-center mb-5 section-title">Въпроси и Отговори</p>
             <div id="accordionQA" class="accordion mt-3 adaptive-width mx-auto">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -310,9 +309,6 @@
             var cover = document.getElementById("cover");
             if (window.pageYOffset >= cover.offsetHeight) {
                 navbar.style.display = "flex";
-                console.log(window.pageYOffset);
-                console.log(document.documentElement.scrollTop);
-                console.log(document.body.scrollTop);
             } else {
                 navbar.style.display = "none";
             }
