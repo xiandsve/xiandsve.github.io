@@ -16,17 +16,12 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result
-    document.getElementById("countdown").innerHTML = 
+    if (distance > 0) {
+        document.getElementById("countdown").innerHTML = 
         padNumber(days) + " дни " 
         + padNumber(hours) + " часа " 
         + padNumber(minutes) + " минути " 
         + padNumber(seconds) + " секунди";
-
-    // If the countdown is over, display some text
-    if (distance < 0) {
-        clearInterval(interval);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
     }
 }
 
