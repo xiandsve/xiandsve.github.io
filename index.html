@@ -47,27 +47,12 @@
         .text-justify {
             text-align: justify;
         }
-        #navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            display: none;
-        }
     </style>
     
     
 </head>
 <body>
     <div class="container-fluid p-0">
-        <nav id="navbar" class="navbar navbar-light bg-light">
-            <div class="container-fluid justify-content-center">
-                <span class="navbar-text me-3 fw-bold">
-                    Потвърдете присъствието си:
-                </span>
-                <a href="./rsvp.html" type="button" class="btn btn-gold">RSVP</a>
-            </div>
-        </nav>
         <div id="cover" class="row">
             <img src="./resources/cover.jpg" class="img-fluid">
         </div>
@@ -278,11 +263,6 @@
                         Какво да направя, ако няма да имам възможност да присъствам?
                     </button>
                   </h2>
-                  <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
-                    <div class="accordion-body">
-                        Много ще съжаляваме, ако няма да може да присъствате и ще ни липсвате! Моля, уведомете ни възможно най-скоро във формата за <a href="./rsvp.html">RSVP</a> или се свържете с нас директно. 
-                    </div>
-                  </div>
                 </div>
             </div>
         </div>
@@ -290,17 +270,5 @@
 
     <script src="./js/countdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        window.onscroll = function() {
-            var navbar = document.getElementById("navbar");
-            var cover = document.getElementById("cover");
-            if (window.pageYOffset >= cover.offsetHeight) {
-                navbar.style.display = "flex";
-            } else {
-                navbar.style.display = "none";
-            }
-        };
-    </script>
 </body>
 </html>
